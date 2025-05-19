@@ -11,17 +11,26 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
+      color: #1e1e2f;
+      scroll-behavior: smooth;
+      position: relative;
+      z-index: 0;
       background-color: #f3f6fa;
-      background-image: url('background.jpg'); /* ← ovde unesi svoj naziv fajla */
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url('background.jpg'); /* zameni sa svojim fajlom */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      color: #1e1e2f;
-      scroll-behavior: smooth;
+      filter: brightness(0.4);
+      z-index: -1;
     }
     header {
-      background: #0d47a1;
+      background: #0d47a1cc; /* poluprozirna pozadina za bolju čitljivost */
       padding: 20px 40px;
       color: white;
       display: flex;
@@ -46,6 +55,8 @@
       padding: 140px 40px;
       text-align: center;
       color: #0d1b2a;
+      position: relative;
+      z-index: 1;
     }
     .hero h1 {
       font-size: 3rem;
@@ -69,6 +80,11 @@
       padding: 60px 40px;
       max-width: 1200px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     h2 {
       font-size: 2rem;
@@ -118,6 +134,8 @@
       border-radius: 16px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       margin-top: 40px;
+      position: relative;
+      z-index: 1;
     }
     .upload-form input[type="file"] {
       margin-bottom: 20px;
@@ -128,10 +146,12 @@
       margin-top: 20px;
     }
     footer {
-      background: #0d47a1;
+      background: #0d47a1cc; /* poluprozirni footer */
       color: white;
       padding: 40px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
   </style>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -220,38 +240,4 @@
     <div class="contact-form">
       <form>
         <input type="text" placeholder="Vaše ime" required />
-        <input type="email" placeholder="Email adresa" required />
-        <textarea rows="5" placeholder="Vaša poruka..."></textarea>
-        <button type="submit">Pošalji</button>
-      </form>
-    </div>
-  </section>
-
-  <section class="upload-form">
-    <h2>Pošaljite svoj fajl</h2>
-    <form action="upload.php" method="POST" enctype="multipart/form-data">
-      <input type="file" name="file" required />
-      <br />
-      <button type="submit">Pošalji fajl</button>
-    </form>
-  </section>
-
-  <footer>
-    © 2025 DentArt | kontakt@dentart.rs | +381 60 XXX XXXX
-  </footer>
-
-  <script>
-    function switchLang(lang) {
-      if (lang === 'en') {
-        document.getElementById('hero-title').innerText = 'Digital precision for perfect prosthetic work';
-        document.getElementById('hero-sub').innerText = 'From scan to design – digital processing of teeth, implants, and surgical guides.';
-        document.getElementById('services-title').innerText = 'Our Services';
-      } else {
-        document.getElementById('hero-title').innerText = 'Digitalna preciznost za savršene protetske radove';
-        document.getElementById('hero-sub').innerText = 'Od skena do dizajna – digitalna obrada zuba, implantata i vodiča.';
-        document.getElementById('services-title').innerText = 'Naše usluge';
-      }
-    }
-  </script>
-</body>
-</html>
+        <input type
