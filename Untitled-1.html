@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galerija osmeha uz Clear4Smile alignere.">
+  <title>Galerija | Clear4Smile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+    }
+    header {
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 40px;
+    }
+    a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #fff;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(192, 192, 192, 0.2);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="images/logo.png" alt="Clear4Smile Logo"></a>
+    <a href="index.html">Povratak na početnu</a>
+  </header>
+
+  <main class="gallery">
+    <img src="images/galerija1.jpg" alt="Galerija slika 1">
+    <img src="images/galerija2.jpg" alt="Galerija slika 2">
+    <img src="images/galerija3.jpg" alt="Galerija slika 3">
+    <img src="images/galerija4.jpg" alt="Galerija slika 4">
+    <img src="images/galerija5.jpg" alt="Galerija slika 5">
+    <img src="images/galerija6.jpg" alt="Galerija slika 6">
+    <img src="images/galerija7.jpg" alt="Galerija slika 7">
+    <img src="images/galerija8.jpg" alt="Galerija slika 8">
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Clear4Smile. Svi osmesi su stvarni.</p>
+  </footer>
+</body>
+</html>
