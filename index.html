@@ -13,44 +13,34 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: url('brushed-aluminum.jpg') center center / cover no-repeat fixed;
-      background-color: #121212;
-      color: #dcdcdc;
-      position: relative;
-    }
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: -1;
+      background: #1e1e1e;
+      color: #e0e0e0;
     }
     header {
-      background: rgba(20, 20, 20, 0.85);
+      background: #2a2a2a;
       padding: 20px 40px;
-      color: #dcdcdc;
+      color: #e0e0e0;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      backdrop-filter: blur(6px);
     }
     .logo {
-      color: silver;
+      color: #c0c0c0;
       font-weight: 700;
       font-size: 1.5rem;
-      z-index: 1001;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
     }
     nav a {
-      color: #c0c0c0;
-      margin: 0 10px;
+      color: #cccccc;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
-      z-index: 1001;
     }
     nav a:hover {
       color: #ffffff;
@@ -59,68 +49,35 @@
       display: flex;
       gap: 10px;
     }
-    .lang-switcher a {
-      color: #ffffff;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .lang-switcher a:hover {
-      text-decoration: underline;
-    }
-
     .hero {
-      position: relative;
-      padding: 160px 40px;
+      padding: 100px 40px;
       text-align: center;
-      color: #e0e0e0;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                  url('hero-img.png') center center / cover no-repeat;
-      opacity: 1;
-      z-index: 0;
-    }
-    .hero h1,
-    .hero p,
-    .hero .cta-buttons {
-      position: relative;
-      z-index: 1;
+      background: url('images/hero-bg.jpg') center/cover no-repeat;
+      color: white;
     }
     .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      animation: fadeInDown 1s ease-in-out;
+      font-size: 2.5rem;
     }
     .hero p {
       font-size: 1.2rem;
-      margin-bottom: 30px;
-      animation: fadeInUp 1.2s ease-in-out;
+      color: #dddddd;
     }
     .cta-buttons button {
-      background-color: #c0c0c0;
+      background-color: #555555;
+      color: #ffffff;
       border: none;
-      padding: 15px 30px;
-      margin: 5px;
+      padding: 12px 24px;
+      margin: 10px;
       font-size: 1rem;
-      border-radius: 8px;
-      color: #111;
+      border-radius: 6px;
       cursor: pointer;
-      transition: transform 0.3s, background-color 0.3s;
+      transition: background-color 0.3s;
     }
     .cta-buttons button:hover {
-      background-color: #e0e0e0;
-      transform: scale(1.05);
+      background-color: #777777;
     }
-
     section {
       padding: 60px 40px;
-      max-width: 1200px;
-      margin: 0 auto;
     }
     h2 {
       font-size: 2rem;
@@ -129,68 +86,63 @@
     }
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 30px;
     }
     .card {
-      background: rgba(255, 255, 255, 0.05);
+      background: #3a3a3a;
       padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(255,255,255,0.05);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      color: #e0e0e0;
       text-align: center;
-      transition: transform 0.3s ease;
-      color: #ccc;
-    }
-    .card:hover {
-      transform: translateY(-5px);
     }
     .card i {
       font-size: 36px;
-      color: #bbb;
+      color: #999999;
       margin-bottom: 15px;
     }
-    .contact-form input, .contact-form textarea {
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
-      border-radius: 8px;
-      border: 1px solid #888;
-      background-color: #2c2c2c;
-      color: #eee;
+      border-radius: 6px;
+      border: 1px solid #555555;
+      background-color: rgba(42, 42, 42, 0.7);
+      color: #eeeeee;
       font-size: 1rem;
+      box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
     }
     .contact-form button {
-      background-color: #777;
+      background-color: #666666;
       color: white;
       border: none;
       padding: 12px 20px;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s;
     }
     .contact-form button:hover {
-      background-color: #999;
+      background-color: #888888;
     }
     .upload-form {
-      background: rgba(255,255,255,0.05);
+      background: #2e2e2e;
       padding: 30px;
-      border-radius: 16px;
+      border-radius: 10px;
       margin-top: 40px;
-      color: #ddd;
+      color: #dddddd;
     }
     footer {
-      background: rgba(0, 0, 0, 0.9);
-      color: #ccc;
+      background: #1a1a1a;
+      color: #bbbbbb;
       padding: 40px;
       text-align: center;
     }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @media (max-width: 768px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
@@ -213,40 +165,40 @@
     <h1 id="hero-title">Digitalna preciznost za savršene protetske radove</h1>
     <p id="hero-sub">Od skena do dizajna – digitalna obrada zuba, implantata i vodiča.</p>
     <div class="cta-buttons">
-      <button>Zatraži saradnju</button>
-      <button>Pošalji fajl</button>
+      <button id="cta1">Zatraži saradnju</button>
+      <button id="cta2">Pošalji fajl</button>
     </div>
   </section>
 
   <section id="usluge">
     <h2 id="services-title">Naše usluge</h2>
     <div class="services">
-      <div class="card"><i class="fas fa-tooth"></i><h3>Digitalni dizajn zuba</h3><p>Krunice, mostovi, inleji/onleji na osnovu STL fajlova.</p></div>
-      <div class="card"><i class="fas fa-screwdriver-wrench"></i><h3>Implantološke suprastrukture</h3><p>Individualni abatmenti, barski sistemi, screw-retained radovi.</p></div>
-      <div class="card"><i class="fas fa-syringe"></i><h3>Surgical guide-ovi</h3><p>Planiranje i izrada vodiča za preciznu hiruršku ugradnju.</p></div>
-      <div class="card"><i class="fas fa-cube"></i><h3>3D modeli i CAM fajlovi</h3><p>Spremno za frezovanje i 3D štampu.</p></div>
-      <div class="card"><i class="fas fa-microchip"></i><h3>CAD CAM dizajn</h3><p>Visokoprecizna digitalna obrada svih vrsta konstrukcija.</p></div>
-      <div class="card"><i class="fas fa-bone"></i><h3>Full Anatomic Zr</h3><p>Cirkonijumske konstrukcije pune anatomije visoke estetike.</p></div>
-      <div class="card"><i class="fas fa-print"></i><h3>3D print</h3><p>Precizna štampa modela, vodiča i privremenih konstrukcija.</p></div>
-      <div class="card"><i class="fas fa-align-center"></i><h3>Clear Aligneri</h3><p>Digitalni dizajn i serijska proizvodnja prozirnih folija.</p></div>
+      <div class="card"><i class="fas fa-tooth"></i><h3 id="srv1">Digitalni dizajn zuba</h3><p id="srv1desc">Krunice, mostovi, inleji/onleji na osnovu STL fajlova.</p></div>
+      <div class="card"><i class="fas fa-screwdriver-wrench"></i><h3 id="srv2">Implantološke suprastrukture</h3><p id="srv2desc">Individualni abatmenti, barski sistemi, screw-retained radovi.</p></div>
+      <div class="card"><i class="fas fa-syringe"></i><h3 id="srv3">Surgical guide-ovi</h3><p id="srv3desc">Planiranje i izrada vodiča za preciznu hiruršku ugradnju.</p></div>
+      <div class="card"><i class="fas fa-cube"></i><h3 id="srv4">3D modeli i CAM fajlovi</h3><p id="srv4desc">Spremno za frezovanje i 3D štampu.</p></div>
+      <div class="card"><i class="fas fa-microchip"></i><h3 id="srv5">CAD CAM dizajn</h3><p id="srv5desc">Visokoprecizna digitalna obrada svih vrsta konstrukcija.</p></div>
+      <div class="card"><i class="fas fa-bone"></i><h3 id="srv6">Full Anatomic Zr</h3><p id="srv6desc">Cirkonijumske konstrukcije pune anatomije visoke estetike.</p></div>
+      <div class="card"><i class="fas fa-print"></i><h3 id="srv7">3D print</h3><p id="srv7desc">Precizna štampa modela, vodiča i privremenih konstrukcija.</p></div>
+      <div class="card"><i class="fas fa-align-center"></i><h3 id="srv8">Clear Aligneri</h3><p id="srv8desc">Digitalni dizajn i serijska proizvodnja prozirnih folija.</p></div>
     </div>
   </section>
 
   <section id="kontakt">
-    <h2>Kontaktirajte nas</h2>
+    <h2 id="contact-title">Kontaktirajte nas</h2>
     <div class="contact-form">
       <form>
-        <input type="text" placeholder="Vaše ime" required />
-        <input type="email" placeholder="Email adresa" required />
-        <textarea rows="5" placeholder="Vaša poruka..."></textarea>
-        <button type="submit">Pošalji</button>
+        <input id="nameField" type="text" placeholder="Vaše ime" required />
+        <input id="emailField" type="email" placeholder="Email adresa" required />
+        <textarea id="msgField" rows="5" placeholder="Vaša poruka..."></textarea>
+        <button type="submit" id="sendBtn">Pošalji</button>
       </form>
       <p style="margin-top:20px; color:#aaa;">Email: <a href="mailto:dentart011@gmail.com" style="color:#ccc;">dentart011@gmail.com</a></p>
     </div>
   </section>
 
   <section class="upload-form">
-    <h2>Pošaljite svoj fajl</h2>
+    <h2 id="upload-title">Pošaljite svoj fajl</h2>
     <form action="upload.php" method="POST" enctype="multipart/form-data">
       <input type="file" name="file" required />
       <br />
@@ -262,15 +214,83 @@
   <script>
     AOS.init();
     function switchLang(lang) {
-      if (lang === 'en') {
-        document.getElementById('hero-title').innerText = 'Digital precision for perfect prosthetic work';
-        document.getElementById('hero-sub').innerText = 'From scan to design – digital processing of teeth, implants, and surgical guides.';
-        document.getElementById('services-title').innerText = 'Our Services';
-      } else {
-        document.getElementById('hero-title').innerText = 'Digitalna preciznost za savršene protetske radove';
-        document.getElementById('hero-sub').innerText = 'Od skena do dizajna – digitalna obrada zuba, implantata i vodiča.';
-        document.getElementById('services-title').innerText = 'Naše usluge';
+      const dictionary = {
+        'en': {
+          heroTitle: 'Digital precision for perfect prosthetic work',
+          heroSub: 'From scan to design – digital processing of teeth, implants, and surgical guides.',
+          servicesTitle: 'Our Services',
+          cta1: 'Request Cooperation',
+          cta2: 'Send File',
+          srv1: 'Digital Tooth Design',
+          srv1desc: 'Crowns, bridges, inlays/onlays based on STL files.',
+          srv2: 'Implant Suprastructures',
+          srv2desc: 'Custom abutments, bar systems, screw-retained works.',
+          srv3: 'Surgical Guides',
+          srv3desc: 'Planning and making guides for precise implant placement.',
+          srv4: '3D Models & CAM Files',
+          srv4desc: 'Ready for milling and 3D printing.',
+          srv5: 'CAD CAM Design',
+          srv5desc: 'High-precision digital processing of all structures.',
+          srv6: 'Full Anatomic Zirconia',
+          srv6desc: 'High-aesthetic full anatomy zirconium structures.',
+          srv7: '3D Printing',
+          srv7desc: 'Precise printing of models, guides, and temporaries.',
+          srv8: 'Clear Aligners',
+          srv8desc: 'Digital design and serial production of transparent trays.',
+          contactTitle: 'Contact Us',
+          nameField: 'Your name',
+          emailField: 'Email address',
+          msgField: 'Your message...',
+          sendBtn: 'Send',
+          uploadTitle: 'Upload your file'
+        },
+        'sr': {
+          heroTitle: 'Digitalna preciznost za savršene protetske radove',
+          heroSub: 'Od skena do dizajna – digitalna obrada zuba, implantata i vodiča.',
+          servicesTitle: 'Naše usluge',
+          cta1: 'Zatraži saradnju',
+          cta2: 'Pošalji fajl',
+          srv1: 'Digitalni dizajn zuba',
+          srv1desc: 'Krunice, mostovi, inleji/onleji na osnovu STL fajlova.',
+          srv2: 'Implantološke suprastrukture',
+          srv2desc: 'Individualni abatmenti, barski sistemi, screw-retained radovi.',
+          srv3: 'Surgical guide-ovi',
+          srv3desc: 'Planiranje i izrada vodiča za preciznu hiruršku ugradnju.',
+          srv4: '3D modeli i CAM fajlovi',
+          srv4desc: 'Spremno za frezovanje i 3D štampu.',
+          srv5: 'CAD CAM dizajn',
+          srv5desc: 'Visokoprecizna digitalna obrada svih vrsta konstrukcija.',
+          srv6: 'Full Anatomic Zr',
+          srv6desc: 'Cirkonijumske konstrukcije pune anatomije visoke estetike.',
+          srv7: '3D print',
+          srv7desc: 'Precizna štampa modela, vodiča i privremenih konstrukcija.',
+          srv8: 'Clear Aligneri',
+          srv8desc: 'Digitalni dizajn i serijska proizvodnja prozirnih folija.',
+          contactTitle: 'Kontaktirajte nas',
+          nameField: 'Vaše ime',
+          emailField: 'Email adresa',
+          msgField: 'Vaša poruka...',
+          sendBtn: 'Pošalji',
+          uploadTitle: 'Pošaljite svoj fajl'
+        }
+      };
+
+      const text = dictionary[lang];
+      document.getElementById('hero-title').innerText = text.heroTitle;
+      document.getElementById('hero-sub').innerText = text.heroSub;
+      document.getElementById('services-title').innerText = text.servicesTitle;
+      document.getElementById('cta1').innerText = text.cta1;
+      document.getElementById('cta2').innerText = text.cta2;
+      for (let i = 1; i <= 8; i++) {
+        document.getElementById(`srv${i}`).innerText = text[`srv${i}`];
+        document.getElementById(`srv${i}desc`).innerText = text[`srv${i}desc`];
       }
+      document.getElementById('contact-title').innerText = text.contactTitle;
+      document.getElementById('nameField').placeholder = text.nameField;
+      document.getElementById('emailField').placeholder = text.emailField;
+      document.getElementById('msgField').placeholder = text.msgField;
+      document.getElementById('sendBtn').innerText = text.sendBtn;
+      document.getElementById('upload-title').innerText = text.uploadTitle;
     }
   </script>
 </body>
