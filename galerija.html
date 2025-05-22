@@ -3,89 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Galerija osmeha sa Clear4Smile alignerima">
-  <meta name="keywords" content="aligneri, galerija osmeha, nevidljive proteze, clear aligners">
-  <meta name="author" content="Clear4Smile">
-  <title>Galerija | Clear4Smile</title>
+  <title>Galerija | DentArt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0a0a0a;
-      color: #ffffff;
-      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      background: #121212;
+      color: #ddd;
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(20, 20, 20, 0.9);
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: silver;
+    }
+    nav a {
+      margin-left: 20px;
       color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: white;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      max-width: 1200px;
-      margin: auto;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 40px;
     }
     .gallery img {
       width: 100%;
-      height: auto;
       border-radius: 12px;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0,0,0,0.9);
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 80vh;
-      border-radius: 12px;
-    }
-    .lightbox:target {
-      display: flex;
-    }
-    .close {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-      font-size: 2rem;
-      color: #fff;
-      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
-  <h1>Galerija osmeha</h1>
-  <div class="gallery">
-    <a href="#img1"><img src="images/gal1.jpg" alt="Smeh 1"></a>
-    <a href="#img2"><img src="images/gal2.jpg" alt="Smeh 2"></a>
-    <a href="#img3"><img src="images/gal3.jpg" alt="Smeh 3"></a>
-    <a href="#img4"><img src="images/gal4.jpg" alt="Smeh 4"></a>
-    <a href="#img5"><img src="images/gal5.jpg" alt="Smeh 5"></a>
-    <a href="#img6"><img src="images/gal6.jpg" alt="Smeh 6"></a>
-    <a href="#img7"><img src="images/gal7.jpg" alt="Smeh 7"></a>
-    <a href="#img8"><img src="images/gal8.jpg" alt="Smeh 8"></a>
-  </div>
+  <header>
+    <div class="logo">DentArt</div>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
 
-  <!-- Lightbox modals -->
-  <div id="img1" class="lightbox"><a href="#" class="close">&times;</a><img src="images/gal1.jpg" alt="Smeh 1"></div>
-  <div id="img2" class="lightbox"><a href="#" class="close">&times;</a><img src="images/gal2.jpg" alt="Smeh 2"></div>
-  <div id="img3" class="lightbox"><a href="#" class="close">&times;</a><img src="images/gal3.jpg" alt="Smeh 3"></div>
-  <div id="img4" class="lightbox"><a href="#" class="close">&times;</a><img src="images/gal4.jpg" alt="Smeh 4"></div>
-  <div id="img5" class="lightbox"><a href="#" class="close">&times;</a><img src="images/gal5.jpg" alt="Smeh 5"></div>
-  <div id="img6" class="lightbox"><a href="#" class="close">&times;</a><img src="images/gal6.jpg" alt="Smeh 6"></div>
-  <div id="img7" class="lightbox"><a href="#" class="close">&times;</a><img src="images/gal7.jpg" alt="Smeh 7"></div>
-  <div id="img8" class="lightbox"><a href="#" class="close">&times;</a><img src="images/gal8.jpg" alt="Smeh 8"></div>
+  <section class="gallery">
+    <img src="galerija1.jpg" alt="Rad 1">
+    <img src="galerija2.jpg" alt="Rad 2">
+    <img src="galerija3.jpg" alt="Rad 3">
+    <img src="galerija4.jpg" alt="Rad 4">
+    <img src="galerija5.jpg" alt="Rad 5">
+    <img src="galerija6.jpg" alt="Rad 6">
+    <img src="galerija7.jpg" alt="Rad 7">
+    <img src="galerija8.jpg" alt="Rad 8">
+  </section>
 </body>
 </html>
